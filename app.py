@@ -10,5 +10,5 @@ if st.checkbox('Afficher le jeu de donnée'):
   st.write(df)
 # 
 #
-st.selectbow('Sélectionner une profession',[1,2,3,4])
+st.selectbox('Sélectionner une profession',[1,2,3,4])
 
