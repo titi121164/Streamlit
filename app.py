@@ -16,4 +16,10 @@ pro = df.Profession.unique()
 #
 # affichage de la liste  pro  dans selectbox
 user_selection = st.selectbox('Sélectionner une profession',pro)
+
+#
+#
+st.slider("Selectionner un age ",min_value=20,max_value=100,value=30,step=1)
+
+#
 st.write(df[df.Profession == user_selection])
