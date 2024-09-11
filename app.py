@@ -5,10 +5,10 @@ st.title("My Dashboard TCE")
 # Lecture du fichier 
 df=pd.read_csv('data.csv')
 
-if st.checkbox('Affciher le jeu de donnée'):
+if st.checkbox('Afficher le jeu de donnée'):
 # affichage Data Frame 
   st.write(df)
 # 
 #
-
+st.selectbow('Sélectionner une profession',[1,2,3,4])
 
