@@ -5,9 +5,7 @@ st.title("My Dashboard TCE")
 # Lecture du fichier 
 df=pd.read_csv('data.csv')
 
-if st.checkbox('Afficher le jeu de donnée'):
-# affichage Data Frame 
-  st.write(df)
+
 # 
 #
 pro = df.Profession.unique()
@@ -18,8 +16,11 @@ pro = df.Profession.unique()
 user_selection = st.selectbox('Sélectionner une profession',pro)
 
 #
-#
-st.slider("Selectionner un age ",min_value=20,max_value=100,value=30,step=1)
+# affiche barre de progression demarre à 30 
+age = st.slider("Selectionner un age ",min_value=20,max_value=100,value=30,step=1)
 
 #
-st.write(df[df.Profession == user_selection])
+if st.checkbox('Afficher le jeu de donnée'):
+# affichage Data Frame 
+#  st.write(df)
+  st.write(df[df.Profession == user_selection])
