@@ -39,7 +39,8 @@ if uploaded_file is not None:
     plt.hist(dataframe['Age'], bins=10)  # Adjust bins as needed
     plt.show()
 #  
-
+plt.hist(dataframe['Age'], bins=10)  # Adjust bins as needed
+plt.show()
 
 
 # Display the histogram
