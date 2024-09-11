@@ -33,9 +33,9 @@ if uploaded_file is not None:
         # Can be used wherever a "file-like" object is accepted:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
+    liste_colonne = dataframe.columns
+    selection_col = st.selectbox('Sélectionner un axe ',liste_colonne)
 #  
-liste_colonne = dataframe.columns
-selection_col = st.selectbox('Sélectionner un axe ',liste_colonne)
 
 ## Create a histogram of the 'age' column
 #plt.hist(dataframe['age'], bins=10)  # Adjust bins as needed
