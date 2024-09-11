@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 #
 st.title("My Dashboard TCE") 
 # Lecture du fichier 
@@ -38,8 +38,8 @@ liste_colonne = dataframe.columns
 selection_col = st.selectbox('Sélectionner un axe ',liste_colonne)
 
 ## Create a histogram of the 'age' column
-plt.hist(dataframe['age'], bins=10)  # Adjust bins as needed
+#plt.hist(dataframe['age'], bins=10)  # Adjust bins as needed
 
 # Display the histogram
-plt.show()
+#plt.show()
 
