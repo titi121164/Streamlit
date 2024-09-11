@@ -33,6 +33,6 @@ if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
 #  
-liste_colonne = dataframe.columns.toliste()
+liste_colonne = dataframe.columns
 selection_col = st.selectbox('Sélectionner un axe ',liste_colonne)
 
