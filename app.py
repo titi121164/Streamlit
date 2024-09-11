@@ -23,4 +23,4 @@ age = st.slider("Selectionner un age ",min_value=20,max_value=100,value=30,step=
 if st.checkbox('Afficher le jeu de donnée'):
 # affichage Data Frame 
 #  st.write(df)
-  st.write(df[df.Profession == user_selection])
+  st.write(df[(df.Profession == user_selection]) & (df.Age == age)])
