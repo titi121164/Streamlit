@@ -13,7 +13,7 @@ if uploaded_file is not None:
     liste_colonne = dataframe.columns
     selection_col = st.selectbox('Sélectionner un axe ',liste_colonne)
   
-    st.write(dataframe[selection_col])    
+  #  st.write(dataframe[selection_col])    
   ## Create a histogram of the 'age' column  
     cols_selected=dataframe[selection_col]    
     fig, ax = plt.subplots()
