@@ -25,7 +25,24 @@ households = st.slider("Households", min_value=1.0, max_value=6082.0, value=500.
 median_income = st.slider("Median Income", min_value=0.5, max_value=15.0, value=5.0, step=0.1)
 
 
+# Création du dictionnaire de données
+data = {
+    "longitude": longitude,
+    "latitude": latitude,
+    "housing_median_age": housing_median_age,
+    "total_rooms": total_rooms,
+    "total_bedrooms": total_bedrooms,
+    "population": population,
+    "households": households,
+    "median_income": median_income
+}
 
+# Appel à l'API
+if st.button("Prédire"):
+  response = requests.post("https://0187-35-196-222-20.ngrok-free.app/Predict", json=data)
+  prediction = response.json()["prediction"]
+  st.write("La prédiction est :", prediction)
+  
 
 
 
