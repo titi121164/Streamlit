@@ -1,6 +1,6 @@
 import streamlit as st
 
- Slider pour longitude
+# Slider pour longitude
 longitude = st.slider("Longitude", min_value=-124.0, max_value=-114.0, value=-122.0, step=0.1)
 
 # Slider pour latitude
