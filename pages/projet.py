@@ -1,6 +1,6 @@
 import streamlit as st
  
-st.title("FAQ Streamlit Michael")
+st.title("FAQ Streamlit Thierry")
  
 # Initialize chat history
 if "messages" not in st.session_state:
