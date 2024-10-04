@@ -1,5 +1,5 @@
 import streamlit as st
-
+import requests
 # URL de l'API FastAPI
 API_URL = "http://localhost:8000/insert_data"
 
