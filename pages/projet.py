@@ -19,7 +19,6 @@ if prompt := st.chat_input("What is up?"):
  # Appel à la méthode insert_data de FastAPI
 response = requests.post(API_URL, json={"libelle": prompt})
 
-response = f"Echo: {prompt}"
 # Affichage de la réponse
 if response.json()["status"] == "ok":
    with st.chat_message("assistant"):
