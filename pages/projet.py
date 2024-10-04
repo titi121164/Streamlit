@@ -17,7 +17,7 @@ if prompt := st.chat_input("What is up?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
  #
  # Appel à la méthode insert_data de FastAPI
-    data = {"message":prompt}
+    data = {"question":prompt}
     response = requests.post(API_URL+'/Insert_data', params=data)
 
 # Affichage de la réponse
