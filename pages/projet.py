@@ -10,7 +10,20 @@ option = st.sidebar.selectbox(
     ('gpt-3.5-turbo', 'gpt-4','sora')
 )
 
-st.title("FAQ Streamlit Thierry")
+#st.title("FAQ kimono de karate")
+# URL de l'image
+image_url = "https://www.budo-fight.com/medias/produits/karategi-shureido.jpg"
+
+# Titre avec image
+st.markdown(
+    f"""
+    <h1 style="display: flex; align-items: center;">
+        <img src="{image_url}" width="50" style="margin-right: 10px;">
+        FAQ sur les kimonos
+    </h1>
+    """,
+    unsafe_allow_html=True
+)
  
 # Initialize chat history
 if "messages" not in st.session_state:
