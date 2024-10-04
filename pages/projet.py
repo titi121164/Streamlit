@@ -20,6 +20,7 @@ if prompt := st.chat_input("What is up?"):
     response = requests.post(API_URL, prompt)
 
 # Affichage de la réponse
+# 
     if response.json()["status"] == "ok":
        with st.chat_message("assistant"):
             retour = response.json()['reponse_openai']
