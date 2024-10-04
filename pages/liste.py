@@ -1,18 +1,18 @@
 import streamlit as st
-import sqlite3
+import requests
 import pandas as pd
 
-# Connexion à la base de données SQLite
-conn = sqlite3.connect('demo.db')
-c = conn.cursor()
+# URL de l'API
+api_url = "  https://cfa4-35-237-200-45.ngrok-free.app/table"
 
-# Lecture des données de la table 'toto'
-query = "SELECT * FROM aichat"
-df = pd.read_sql_query(query, conn)
+# Appel de l'API
+response = requests.get(api_url)
 
-# Affichage des données avec Streamlit
-st.title('Contenu de la table aichat')
-st.dataframe(df)
-
-# Fermeture de la connexion
-conn.close()
+# Vérification de la réponse
+if response.status_code == 200:
+    data = response.json()
+    df = pd.DataFrame(data)
+    st.title('Contenu de la table aichat')
+    st.dataframe(df)
+else:
+    st.error("Erreur lors de la récupération des données de l'API")
