@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import os
 # URL de l'API FastAPI
 API_URL = st.sidebar.text_input("Base URL")
 #
