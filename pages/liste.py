@@ -16,14 +16,15 @@ st.markdown(
 API_URL = st.sidebar.text_input("Base URL")
 if not API_URL:
     st.sidebar.error("Veuillez entrer une URL de base.")
-api_url=API_URL+'/table'
-# Appel de l'API
-response = requests.get(api_url)
-
-# Vérification de la réponse
-if response.status_code == 200:
-    data = response.json()
-    df = pd.DataFrame(data)
-    st.dataframe(df)
-else:
-    st.error("Erreur lors de la récupération des données de l'API")
+else:    
+    api_url=API_URL+'/table'
+    # Appel de l'API
+    response = requests.get(api_url)
+    
+    # Vérification de la réponse
+    if response.status_code == 200:
+        data = response.json()
+        df = pd.DataFrame(data)
+        st.dataframe(df)
+    else:
+        st.error("Erreur lors de la récupération des données de l'API")
