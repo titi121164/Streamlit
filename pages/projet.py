@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 # URL de l'API FastAPI
-API_URL = st.sidebare.text_input("Base URL")
+API_URL = st.sidebar.text_input("Base URL")
 
 st.title("FAQ Streamlit Thierry")
  
