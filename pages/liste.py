@@ -12,8 +12,10 @@ st.markdown(
 )
 
 # URL de l'API
-#api_url = "  https://cfa4-35-237-200-45.ngrok-free.app/table"
+#api_url = "https://60c5-34-41-87-168.ngrok-free.app/table"
 API_URL = st.sidebar.text_input("Base URL")
+if not API_URL:
+    st.sidebar.error("Veuillez entrer une URL de base.")
 api_url=API_URL+'/table'
 # Appel de l'API
 response = requests.get(api_url)
