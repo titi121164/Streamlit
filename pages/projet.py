@@ -27,7 +27,7 @@ if prompt := st.chat_input("What is up?"):
    #data = {"question":prompt}
     data = {
     "question": prompt,
-    "modele": option  # Ajoutez votre deuxième paramètre ici
+    "modele_ai": option  # Ajoutez votre deuxième paramètre ici
     }
     response = requests.post(API_URL+'/Insert_data', params=data)
 
