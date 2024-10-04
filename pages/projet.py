@@ -22,7 +22,7 @@ if prompt := st.chat_input("What is up?"):
 # Affichage de la réponse
     if response.json()["status"] == "ok":
        with st.chat_message("assistant"):
-            st.markdown(response)
+            st.markdown(: {response.json()['reponse_openai']})
     else:
        st.markdown(f"Erreur lors de l'insertion : {response.json()['reponse_openai']}")
 # Add assistant response to chat history
