@@ -3,6 +3,7 @@ import requests
 # URL de l'API FastAPI
 API_URL = st.sidebar.text_input("Base URL")
 #
+#
 # Barre latérale avec une liste déroulante
 option = st.sidebar.selectbox(
     'Choisissez votre modele  :',
