@@ -27,4 +27,4 @@ if prompt := st.chat_input("What is up?"):
     else:
        st.markdown(f"Erreur lors de l'insertion : {response.json()['reponse_openai']}")
 # Add assistant response to chat history
- st.session_state.messages.append({"role": "assistant", "content": retour})
+    st.session_state.messages.append({"role": "assistant", "content": retour})
