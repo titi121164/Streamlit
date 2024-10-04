@@ -11,15 +11,14 @@ option = st.sidebar.selectbox(
 )
 
 #st.title("FAQ kimono de karate")
-# URL de l'image
-image_url = "https://www.google.com/imgres?q=shureido%20kimono&imgurl=https%3A%2F%2Fwww.kumasport.fr%2Fwp-content%2Fuploads%2F2020%2F03%2Fshureido-2-600x600.jpg&imgrefurl=https%3A%2F%2Fwww.kumasport.fr%2Fproduit%2Fkarate-gi-shureido-new-wave-3%2F&docid=k02nHY_JbpnUAM&tbnid=vFArV5n3KQQm9M&vet=12ahUKEwif3bzL5vSIAxV6TqQEHaRQPHMQM3oECEoQAA..i&w=600&h=600&hcb=2&ved=2ahUKEwif3bzL5vSIAxV6TqQEHaRQPHMQM3oECEoQAA"
-
+# Chemin relatif de l'image
+image_path = "shureido.jpg"
 
 # Titre avec image
 st.markdown(
     f"""
     <h1 style="display: flex; align-items: center;">
-        <img src="{image_url}" width="50" style="margin-right: 10px;">
+        <img src="{image_path}" width="50" style="margin-right: 10px;">
         FAQ sur les kimonos
     </h1>
     """,
