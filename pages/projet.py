@@ -11,14 +11,8 @@ option = st.sidebar.selectbox(
     ('gpt-3.5-turbo', 'gpt-4','sora')
 )
 
-#st.title("FAQ kimono de karate")
-# Chemin relatif de l'image dans votre dépôt Git
-current_dir = os.path.dirname(__file__)
-image_path = os.path.join(current_dir, "images", "shureido.jpg")
+st.title("FAQ kimono de karate")
 
-# Affichage de l'image et du titre
-st.image(image_path, width=50)
-st.title('FAQ sur les kimonos')
  
 # Initialize chat history
 if "messages" not in st.session_state:
