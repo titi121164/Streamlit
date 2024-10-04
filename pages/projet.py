@@ -17,14 +17,14 @@ if prompt := st.chat_input("What is up?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
  #
  # Appel à la méthode insert_data de FastAPI
- response = requests.post(API_URL, json={"libelle": prompt})
+response = requests.post(API_URL, json={"libelle": prompt})
 
 response = f"Echo: {prompt}"
 # Affichage de la réponse
- if response.json()["status"] == "ok":
+if response.json()["status"] == "ok":
    with st.chat_message("assistant"):
      st.markdown(response)
- else:
+else:
      st.markdown(f"Erreur lors de l'insertion : {response.json()['reponse_openai']}")
 # Add assistant response to chat history
 st.session_state.messages.append({"role": "assistant", "content": response})
