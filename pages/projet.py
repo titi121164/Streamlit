@@ -6,7 +6,7 @@ API_URL = st.sidebar.text_input("Base URL")
 # Barre latérale avec une liste déroulante
 option = st.sidebar.selectbox(
     'Choisissez votre modele  :',
-    ('gpt-3.5-turbo', 'gpt-4')
+    ('gpt-3.5-turbo', 'gpt-4','sora')
 )
 
 st.title("FAQ Streamlit Thierry")
@@ -23,7 +23,11 @@ if prompt := st.chat_input("What is up?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
  #
  # Appel à la méthode insert_data de FastAPI
-    data = {"question":prompt}
+   #data = {"question":prompt}
+    data = {
+    "question": prompt,
+    "modele": option  # Ajoutez votre deuxième paramètre ici
+}
     response = requests.post(API_URL+'/Insert_data', params=data)
 
 # Affichage de la réponse
