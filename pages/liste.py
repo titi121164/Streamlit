@@ -22,7 +22,6 @@ response = requests.get(api_url)
 if response.status_code == 200:
     data = response.json()
     df = pd.DataFrame(data)
-    st.title('Contenu de la table aichat')
     st.dataframe(df)
 else:
     st.error("Erreur lors de la récupération des données de l'API")
