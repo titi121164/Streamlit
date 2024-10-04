@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 # URL de l'API FastAPI
-API_URL = "https://1a26-35-237-200-45.ngrok-free.app/Insert_data"
+API_URL = st.sidebare.text_input("Base URL")
 
 st.title("FAQ Streamlit Thierry")
  
@@ -17,7 +17,7 @@ if prompt := st.chat_input("What is up?"):
     st.session_state.messages.append({"role": "user", "content": prompt})
  #
  # Appel à la méthode insert_data de FastAPI
-    response = requests.post(API_URL, prompt)
+    response = requests.post(API_URL+'/Insert_data', prompt)
 
 # Affichage de la réponse
 # 
