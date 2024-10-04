@@ -11,22 +11,13 @@ option = st.sidebar.selectbox(
 )
 
 #st.title("FAQ kimono de karate")
-# Chemin relatif de l'image
-image_path = "shureido.jpg"
+# Chemin relatif de l'image dans votre dépôt Git
+current_dir = os.path.dirname(__file__)
+image_path = os.path.join(current_dir, "images", "shureido.jpg")
 
-# Chargement de l'image
-image = open(image_path, "rb").read()
-
-# Titre avec image
-st.markdown(
-    f"""
-    <div style="display: flex; align-items: center;">
-        <img src="data:image/jpeg;base64,{image.encode('base64').decode()}" width="50" style="margin-right: 10px;">
-        <h1>FAQ sur les kimonos</h1>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# Affichage de l'image et du titre
+st.image(image_path, width=50)
+st.title('FAQ sur les kimonos')
  
 # Initialize chat history
 if "messages" not in st.session_state:
