@@ -14,13 +14,16 @@ option = st.sidebar.selectbox(
 # Chemin relatif de l'image
 image_path = "shureido.jpg"
 
+# Chargement de l'image
+image = open(image_path, "rb").read()
+
 # Titre avec image
 st.markdown(
     f"""
-    <h1 style="display: flex; align-items: center;">
-        <img src="{image_path}" width="50" style="margin-right: 10px;">
-        FAQ sur les kimonos
-    </h1>
+    <div style="display: flex; align-items: center;">
+        <img src="data:image/jpeg;base64,{image.encode('base64').decode()}" width="50" style="margin-right: 10px;">
+        <h1>FAQ sur les kimonos</h1>
+    </div>
     """,
     unsafe_allow_html=True
 )
