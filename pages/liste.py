@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
 import pandas as pd
-
+#
+st.title("Historique de la FAQ  sur les kimono de karate")
 # URL de l'API
 #api_url = "  https://cfa4-35-237-200-45.ngrok-free.app/table"
 API_URL = st.sidebar.text_input("Base URL")
