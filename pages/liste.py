@@ -2,7 +2,15 @@ import streamlit as st
 import requests
 import pandas as pd
 #
-st.title("Historique de la FAQ  sur les kimono de karate")
+
+# Titre centré
+st.markdown(
+    """
+    <h1 style="text-align: center;">Historique de la FAQ sur les kimonos de karaté</h1>
+    """,
+    unsafe_allow_html=True
+)
+
 # URL de l'API
 #api_url = "  https://cfa4-35-237-200-45.ngrok-free.app/table"
 API_URL = st.sidebar.text_input("Base URL")
