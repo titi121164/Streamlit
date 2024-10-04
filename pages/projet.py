@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 # URL de l'API FastAPI
-API_URL = "https://bba2-35-237-200-45.ngrok-free.app/insert_data"
+API_URL = "https://bba2-35-237-200-45.ngrok-free.app/Insert_data"
 
 st.title("FAQ Streamlit Thierry")
  
