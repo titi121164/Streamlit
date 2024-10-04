@@ -4,7 +4,7 @@ import pandas as pd
 
 # URL de l'API
 api_url = "  https://cfa4-35-237-200-45.ngrok-free.app/table"
-
+API_URL = st.sidebar.text_input("Base URL")
 # Appel de l'API
 response = requests.get(api_url)
 
